@@ -50,7 +50,7 @@ export default function SortFilter({
       <DialogTrigger asChild>
         <Button
           variant="outline"
-          className="flex items-center gap-2 min-w-[200px] justify-between"
+          className="flex items-center gap-2 min-w-0 w-full sm:min-w-[200px] justify-between"
         >
           <div className="flex items-center gap-2">
             <SlidersHorizontal className="w-4 h-4" />
