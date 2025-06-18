@@ -4,7 +4,7 @@ import { Suspense } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import CarGrid from './components/car-grid';
-import MainComponent from './components/main';
+import Header from './components/header';
 
 function LoadingSkeleton() {
   return (
@@ -39,7 +39,9 @@ function LoadingSkeleton() {
 export default function HomePage() {
   return (
     <div>
-      <MainComponent />
+       <Suspense fallback={<></>}>
+        <Header />
+      </Suspense>
       <main className="min-h-screen bg-background">
         <div className="container">
           <Suspense fallback={<LoadingSkeleton />}>
